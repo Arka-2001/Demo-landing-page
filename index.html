@@ -32,21 +32,62 @@
             </div>
         </div>
     </div>
-    <script>
+
+    <!-- <script>
         function toggleNavbar() 
         {
             const toggleBtn = document.querySelector('.toggle-btn');
             const  navbar = document.getElementById("navbar");
             if (navbar.style.display === "block") 
             {
-                navbar.style.display = "none";
-
-        
+                navbar.style.display = "none"; 
             } else 
             {
+                navbar.style.display = "block"; 
+            }
+        }
+    </script> -->
+
+    <script>
+
+        function toggleNavbar() {
+            const navbar = document.getElementById("navbar");
+            const contentArea = document.querySelector('.textarea');
+            
+            if (navbar.style.display === "block" || navbar.style.display === "") {
+                navbar.style.display = "none";
+                contentArea.style.marginLeft = "0"; 
+            } else {
                 navbar.style.display = "block";
+                contentArea.style.marginLeft = "16vw"; 
             }
         }
     </script>
+    
+
+
+    <!-- <script>
+        function toggleNavbar() {
+            const navbar = document.getElementById("navbar");
+            const isCollapsed = navbar.classList.toggle("collapsed");
+            localStorage.setItem("navbarCollapsed", isCollapsed ? "true" : "false");
+        }
+
+        function applyNavbarState() {
+            const navbar = document.getElementById("navbar");
+            const isCollapsed = localStorage.getItem("navbarCollapsed") === "true";
+            
+            if (isCollapsed) {
+                navbar.classList.add("collapsed");
+                console.log("hi");
+            } else {
+                navbar.classList.remove("collapsed");
+                console.log("by");
+            }
+        }
+   
+        window.onload = applyNavbarState;
+    </script> -->
+    
 </body>
 </html>
