@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="navnew">
+            <button class="toggle-btn" onclick="toggleNavbar()">☰</button>
+            <div class="navbar" id="navbar">
+                <div class="logo">
+                    <img src="download.jpg" alt="Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="emp_details.html">Employee Details</a></li>
+                    <li><a href="reg_emp.html">Registration</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="textarea">
+            <header>
+                <h2>ITC</h2>
+            </header>
+            <div class="content">
+                <h1>Welcome to ITC DEMO</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleNavbar() 
+        {
+            const toggleBtn = document.querySelector('.toggle-btn');
+            const  navbar = document.getElementById("navbar");
+            if (navbar.style.display === "block") 
+            {
+                navbar.style.display = "none";
+
+        
+            } else 
+            {
+                navbar.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden; 
+    background-color: #95cac38e;
+}
+
+.navnew {
+    display: flex;
+    flex-direction: row;
+    /* position: fixed; */
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    font-size: 2.5vw;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.navbar {
+    height: 100vh;
+    width: 16vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding: 20px;
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding-top: 60px;
+    transition: transform 0.3s ease;
+}
+
+
+.navbar.show {
+    transform: translateX(0);
+}
+
+.navbar.hide {
+    transform: translateX(-100%);
+}
+
+.logo img {
+    width: 9vw;
+    margin-top: 115px;
+    border-radius: 20%;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.nav-links li {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5vw;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover,.nav-links li a.active {
+    background-color: #575757;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.toggle-btn {
+    font-size: 2.2vw; 
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 1vw;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s, font-size 0.3s, padding 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #575757;
+}
+h1{
+    font-size: 3.5vw;
+}
+h2{
+    font-size: 2.1vw;
+}
+.textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 250px; 
+    padding: 20px;
+}
+
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    height: 100%;
+    width:100%;
+} */
+
+.form-container {
+    margin-top: 110px;
+    background-color: #7fb9d3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 135vw;
+    max-width: 36.4583vw;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.gender-options {
+    margin-bottom: 20px;
+}
+
+/* .gender-options label {
+    margin-right: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+} */
+.gender-options {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: #777;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.some1,.some2,.some3,.some4{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding:12px;
+}
+#name{
+    width:59%;
+}
+
+#email{
+    width: 70%;
+}
+#contact,#gender{
+    width:49%;
+    gap: 20px;
+}
+
+#grade{
+    width:40%;
+}
+
+#manager,#department,#division{
+    width: 40%;
+}
