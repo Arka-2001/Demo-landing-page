@@ -100,15 +100,41 @@
     </div>   
     
     <script>
-        function toggleNavbar() {
-            const toggleBtn = document.querySelector('.toggle-btn');
-            const  navbar = document.getElementById("navbar");
-            if (navbar.style.display === "block") {
-                navbar.style.display = "none";
-            } else {
-                navbar.style.display = "block";
-            }
-}
+       function init() {
+               const menu = document.querySelector('.toggle-btn');
+               const navbar = document.getElementById("navbar");
+               const contentArea = document.querySelector('.textarea');
+               const flag = localStorage.getItem('navbar-display');
+               if (flag === 'true') {
+                    menu.style.left = "16vw";
+                    navbar.style.display = "block";
+                    contentArea.style.marginLeft = "16vw";
+               } else {
+                    menu.style.left = "10px";
+                    navbar.style.display = "none";
+                    contentArea.style.marginLeft = "0";
+                    localStorage.setItem('navbar-display', 'false');
+               }
+          }
+          function toggleNavbar() {
+               const menu = document.querySelector('.toggle-btn');
+               const navbar = document.getElementById("navbar");
+               const contentArea = document.querySelector('.textarea');
+               if (navbar.style.display === "block" || navbar.style.display === "") {
+                    menu.style.left = "10px";
+                    navbar.style.display = "none";
+                    contentArea.style.marginLeft = "0";
+                    localStorage.setItem('navbar-display', 'false');
+               } else {
+                    menu.style.left = "16vw";
+                    navbar.style.display = "block";
+                    contentArea.style.marginLeft = "16vw";
+                    localStorage.setItem('navbar-display', 'true');
+               }
+          }
+          window.onload = function () {
+               init();
+          }
     </script>
 </body>
 </html>

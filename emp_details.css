@@ -14,22 +14,6 @@ body {
 }
 
 
-/* .navnew {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 16vw;
-    height: 100vh;
-    background-color: #333;
-    transition: transform 0.3s ease;
-    z-index: 998;
-}
-
-.navnew.collapsed {
-    transform: translateX(-100%);
-} */
-
-
 header {
     width: 100%;
     background-color: #333;
